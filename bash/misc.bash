@@ -1,4 +1,5 @@
 alias cc='clear'
+alias ccl='clear & ls'
 #alias ls='ls --color=auto'
 #alias ll='ls -lah'
 alias grep='grep --color=auto'
