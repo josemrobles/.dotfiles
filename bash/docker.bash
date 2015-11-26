@@ -3,6 +3,7 @@ function initDocker () { docker-machine start "$1" && eval \"$(docker-machine en
 alias evalDocker='eval "$(docker-machine env default)"'
 alias upDocker='docker-compose up -d'
 function sshDocker () { docker exec -it "$1" /bin/bash; } 
+alias startDocker='docker start $(docker ps -aq)'
 alias stopDocker='docker stop $(docker ps -q)'
 alias nukeDocker='docker rm $(docker ps -aq) && docker rmi $(docker images -aq) && docker images && docker ps'
 export -f sshDocker
