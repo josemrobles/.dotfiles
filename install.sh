@@ -1,18 +1,24 @@
 #!/bin/bash
-clear
-# Symlink configs
-  # Backup vimrc
-  # Backup bashrc
-  # Backup tmux 
 
-  # Symlinks
+
+# Install my .vimrc 
+echo "- Checking for my .vimrc file"
+grep -q "ROBI" ~/.vimrc
+if [ $? -eq 1 ] ; then
+	echo "   - Installing my .vimrc file"
+	pwd=$(pwd)
+	mv ~/.vimrc ~/.vimrc.BAK
+	ln -s $pwd/vim/vimrc ~/.vimrc
+else
+	echo "   - My .vimrc found"
+fi
 
 # Install Jellybeans color scheme
-echo "Checking for vim colors  dir:"
+echo "- Checking for vim colors dir:"
 if [ -d ~/.vim/colors ]; then
-	echo "--- Directory exists, checking for jellybeans.vim"
+	echo "   - Directory exists, checking for jellybeans.vim"
 	if [ -f ~/.vim/colors/jellybeans.vim ]; then
-		echo "--- File exists"
+		echo "   - File exists"
 	else
 		echo "File does not exist, downloading"
 		cd ~/.vim/colors;
