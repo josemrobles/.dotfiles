@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# git clone https://github.com/edkolev/tmuxline.vim ~/.vim/bundle/tmuxline.vim
 
 # Install my .vimrc 
 echo "- Checking for my .vimrc file"
