@@ -15,7 +15,7 @@ set tabstop=4
 set shiftwidth=4
 
 set t_Co=256 "Sets it to 256 color mode
-colorscheme atom-dark-256
+colorscheme atom
 
 filetype plugin on  
 let g:go_disable_autoinstall = 0  
