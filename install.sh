@@ -10,15 +10,23 @@ else
 	ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 fi
 
+# Install my .bashrc 
+if [ -f ~/.bashrc ]; then
+	echo "   - My .bashrc found"
+else
+	echo "   - Installing my .bashrc file"
+	ln -s ~/.dotfiles/bash/bashrc ~/.bashrc
+fi
+
 # Adding some color
-#if [ -d ~/.vim/colors ]; then
-#	echo "   - Colors directory exists, backing up..."
-#	tar -czvf ~/colors-backup-DATE.tgz ~/.vim/colors
-#	rm -fr ~/.vim/colors
-#	cd ~/.vim
-#	git clone git@github.com:josemrobles/colors.git
-#else
-#	echo "   - No Colors present..."
-#	cd ~/.vim/
-#	git clone git@github.com:josemrobles/colors.git
-#fi
+if [ -d ~/.vim/colors ]; then
+	echo "   - Colors directory exists, backing up..."
+	tar -czvf ~/colors-backup-DATE.tgz ~/.vim/colors
+	rm -fr ~/.vim/colors
+	cd ~/.vim
+	git clone git@github.com:josemrobles/colors.git
+else
+	echo "   - No Colors present..."
+	cd ~/.vim/
+	git clone git@github.com:josemrobles/colors.git
+fi
