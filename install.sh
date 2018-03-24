@@ -32,10 +32,9 @@ if [ -d ~/.vim/colors ]; then
 	tar -czvf ~/colors-backup-DATE.tgz ~/.vim/colors
 	rm -fr ~/.vim/colors
 	cd ~/.vim
-	#git clone git@github.com/josemrobles/colors.git
-	git clone https://github.com/josemrobles/colors.git
+	git clone https://github.com/jrobles/colors.git
 else
 	echo "   - No Colors present..."
 	cd ~/.vim/
-	git clone https://github.com/josemrobles/colors.git
+	git clone https://github.com/jmrobles/colors.git
 fi
