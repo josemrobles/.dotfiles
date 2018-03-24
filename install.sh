@@ -3,6 +3,14 @@
 # git clone https://github.com/edkolev/tmuxline.vim ~/.vim/bundle/tmuxline.vim
 
 # Install my .vimrc 
+if [ -f ~/.tmux.conf ]; then
+	echo "   - My tmux xonfig file found"
+else
+	echo "   - Installing my tmux xonfig"
+	ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
+fi
+
+# Install my .vimrc 
 if [ -f ~/.vimrc ]; then
 	echo "   - My .vimrc found"
 else
