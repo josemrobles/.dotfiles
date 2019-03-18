@@ -35,6 +35,7 @@ if [ -d ~/.vim/colors ]; then
 	git clone https://github.com/jrobles/colors.git
 else
 	echo "   - No Colors present..."
+	mkdir -p ~/.vim
 	cd ~/.vim/
-	git clone https://github.com/jmrobles/colors.git
+	git clone https://github.com/jrobles/colors.git
 fi
